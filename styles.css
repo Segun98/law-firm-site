@@ -17,6 +17,10 @@ body {
     background: #f2f7f5;
 }
 
+textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
 li {
     list-style: none;
 }

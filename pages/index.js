@@ -131,10 +131,52 @@ export default function Home() {
             </Link>
           </aside>
         </section>
-
-        <section className="home-team">TEAM</section>
-
-        <section className="home-contact">Contact</section>
+        <section className="home-contact">
+          <h3>We Are a Message Away</h3>
+          <div className="home-contact-wrap">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
+            >
+              <div>
+                <label htmlFor="name">Your Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Your Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="email@example.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone Number</label>
+                <input type="phone" name="phone" id="phone" />
+              </div>
+              <div>
+                <label htmlFor="body"> Body</label>
+                <textarea
+                  name="body"
+                  id="body"
+                  cols="30"
+                  rows="10"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <aside>
+                <button type="submit">Send</button>
+              </aside>
+            </form>
+          </div>
+        </section>
 
         <style jsx>{`
           @media only screen and (min-width: 1200px) {
@@ -145,16 +187,8 @@ export default function Home() {
           }
 
           @media only screen and (min-width: 2000px) {
-            .intro {
-              height: 700px;
-            }
-
-            .intro-wrap {
-              height: 50vh;
-            }
-
-            .intro-wrap p {
-              font-size: 1.1rem;
+            .intro img {
+              height: 800px;
             }
           }
 
@@ -271,6 +305,8 @@ export default function Home() {
 
           .home-about-content h1 {
             color: #faae2b;
+            font-size: 1.15rem;
+            font-weight: bold;
           }
 
           .home-about-content p {
@@ -312,6 +348,87 @@ export default function Home() {
 
             .home-about {
               padding: 50px 0;
+            }
+
+            .home-about-content h1 {
+              font-size: 1.3rem;
+            }
+          }
+
+          .home-contact {
+            padding: 20px 0;
+          }
+
+          .home-contact h3 {
+            text-align: center;
+            color: #00473e;
+            font-weight: bold;
+            font-size: 1.1rem;
+          }
+          .home-contact form {
+            margin: auto;
+            width: 90%;
+          }
+
+          .home-contact form div {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .home-contact form label {
+            font-weight: bold;
+            color: #00473e;
+          }
+
+          .home-contact form input {
+            padding: 5px;
+          }
+
+          .home-contact form textarea {
+            padding: 10px;
+          }
+
+          .home-contact form aside {
+            text-align: center;
+            margin-top: 10px;
+          }
+          .home-contact form aside button {
+            padding: 10px 25px;
+            background: #faae2b;
+            color: #00473e;
+            border: none;
+          }
+
+          @media only screen and (min-width: 700px) {
+            .home-contact form {
+              width: 70%;
+            }
+          }
+
+          @media only screen and (min-width: 1000px) {
+            .home-contact h3 {
+              font-size: 1.15rem;
+            }
+            .home-contact form {
+              width: 70%;
+            }
+          }
+
+          @media only screen and (min-width: 1200px) {
+            .home-contact h3 {
+              font-size: 1.2rem;
+            }
+            .home-contact form {
+              width: 50%;
+            }
+          }
+
+          @media only screen and (min-width: 2000px) {
+            .home-contact h3 {
+              font-size: 1.3rem;
+            }
+            .home-contact form {
+              width: 40%;
             }
           }
         `}</style>

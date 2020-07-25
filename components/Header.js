@@ -104,6 +104,9 @@ function Header() {
           transition: ease-in 0.7s;
           z-index: 1;
         }
+        .nav-links ul {
+          background: #f2f7f5;
+        }
 
         .nav-links.open-hamburger {
           margin-right: 0px;
@@ -170,6 +173,9 @@ function Header() {
             width: 400px;
             height: 0;
             margin-right: 0px;
+          }
+          .nav-links ul {
+            background: none;
           }
 
           .hamburger {
