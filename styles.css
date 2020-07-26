@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+:root {
+    --greenish: #00473e;
+    --text: #475d5b;
+}
+
 *,
 *::before,
 *::after {
@@ -33,6 +38,30 @@ a {
     text-decoration: none;
 }
 
+
+.nav-links ul {
+    background: #f2f7f5;
+    z-index: 2 !important;
+}
+
+.carousel-caption {
+    z-index: 0 !important;
+}
+
+.carousel-control-next {
+    z-index: 0 !important;
+}
+
+.carousel-caption h3 {
+    font-size: 1.2rem;
+    background: rgb(0, 0, 0, 0.9);
+}
+
+.carousel-caption p {
+    font-size: 0.9rem;
+    background: rgb(0, 0, 0, 0.9);
+}
+
 @media only screen and (min-width: 1200px) {
     .carousel-caption {
         position: absolute;
@@ -46,13 +75,28 @@ a {
     .carousel-caption h3 {
         font-size: 3rem;
         font-weight: bold;
-        background: blue;
+        background: rgb(0, 0, 0, 0.9);
         display: inline;
     }
 
     .carousel-caption p {
-        background: blue;
+        background: rgb(0, 0, 0, 0.9);
         display: inline;
     }
+}
 
+.team {
+    padding: 20px 0;
+}
+
+.team-wrap {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.team-wrap img {
+    height: auto;
+    width: 100%;
 }

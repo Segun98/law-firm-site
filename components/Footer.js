@@ -78,10 +78,27 @@ export default function Footer() {
           <div className="footer-services">
             <h3>Practice Areas</h3>
             <ul>
-              <li>Litigation</li>
-              <li>Tax Advisory</li>
-              <li>Dispute Resolution</li>
-              <li>Corporate and Commercial Practice</li>
+              <li>
+                {" "}
+                <Link href="/practice#litigation">
+                  <a>Litigation</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice#tax">
+                  <a>Tax Advisory</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice#dispute">
+                  <a>Dispute Resolution</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/practice#corporate">
+                  <a>Corporate and Commercial Practice</a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -89,12 +106,16 @@ export default function Footer() {
           <div>
             {" "}
             &copy; Law Firm, {new Date().getFullYear()}. Designed by{" "}
-            <a href="https://segunos.tk">SegunOS</a>{" "}
+            <a
+              href="https://segunos.tk"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SegunOS
+            </a>
           </div>
         </div>
       </section>
-
-      {/* #### CSS IN JSX STYLES  #### */}
 
       <style jsx>{`
         .footer {
@@ -129,7 +150,7 @@ export default function Footer() {
           color: black;
         }
 
-        .footer-quicklinks ul li a {
+        ul li a {
           color: white;
         }
 
@@ -175,7 +196,7 @@ export default function Footer() {
             align-items: center;
             justify-content: center;
             font-size: 20px;
-            padding-top: 100px;
+            padding-top: 50px;
           }
 
           .footer-Contact {

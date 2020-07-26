@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [hamburger, setHamburger] = useState(true);
@@ -20,13 +22,13 @@ function Header() {
         </div>
         <div className="hamburger">
           <button onClick={toggleHamburger}>
-            <i className="fa fa-bars" aria-hidden="true"></i>
+            <FontAwesomeIcon icon={faBars} size="lg" />
           </button>
         </div>
         <div className={hamburger ? "nav-links" : "nav-links open-hamburger"}>
           <ul>
             <button className="close-hamburger" onClick={toggleHamburger}>
-              <i className="fas fa-times" aria-hidden="true"></i>
+              <FontAwesomeIcon icon={faTimes} size="lg" />
             </button>
             <li>
               <Link href="/">
@@ -104,9 +106,6 @@ function Header() {
           transition: ease-in 0.7s;
           z-index: 1;
         }
-        .nav-links ul {
-          background: #f2f7f5;
-        }
 
         .nav-links.open-hamburger {
           margin-right: 0px;
@@ -141,12 +140,12 @@ function Header() {
         nav ul li a {
           color: #475d5b;
         }
-
-        nav ul li a:hover {
+        /* 
+        .nav-links ul li a:hover {
           color: #00473e;
           transition: ease-in 0.3s;
           border-bottom: 1px solid #00473e;
-        }
+        } */
 
         nav ul li:last-child {
           background: #faae2b;

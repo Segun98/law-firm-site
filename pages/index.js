@@ -8,17 +8,17 @@ export default function Home() {
     <Layout>
       <div>
         <Head>
-          <title>Law Firm</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>Law Firm | Home</title>
         </Head>
-        <div className="intro">
-          <Carousel indicators={false}>
+        <main className="intro">
+          <Carousel indicators={false} interval={7000}>
             <Carousel.Item>
               <img className="d-block w-100" src="/law.jpg" alt="First slide" />
               <Carousel.Caption>
-                <h3>First slide label</h3>
+                <h3>We Are Your Trusted Legal Partner</h3>
                 <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  We Provide Wide Ranging Legal Services for Our Clients, from
+                  Corporate and Commercial Practice to Dispute Resolution.
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
@@ -50,7 +50,7 @@ export default function Home() {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-        </div>
+        </main>
 
         <section className="home-services">
           <h2 className="home-service-title">Firm's Area of Practice</h2>
@@ -63,7 +63,7 @@ export default function Home() {
                 animi? Laudantium obcaecati reiciendis ab perspiciatis
                 doloremque vitae sed excepturi quaerat repellat similique.
               </div>
-              <Link href="/">
+              <Link href="/practice#litigation">
                 <a>Read More</a>
               </Link>
             </div>
@@ -76,7 +76,7 @@ export default function Home() {
                 animi? Laudantium obcaecati reiciendis ab perspiciatis
                 doloremque vitae sed excepturi quaerat repellat similique.
               </div>
-              <Link href="/">
+              <Link href="/practice#tax">
                 <a>Read More</a>
               </Link>
             </div>
@@ -89,7 +89,7 @@ export default function Home() {
                 animi? Laudantium obcaecati reiciendis ab perspiciatis
                 doloremque vitae sed excepturi quaerat repellat similique.
               </div>
-              <Link href="/">
+              <Link href="/practice#dispute">
                 <a>Read More</a>
               </Link>
             </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 animi? Laudantium obcaecati reiciendis ab perspiciatis
                 doloremque vitae sed excepturi quaerat repellat similique.
               </div>
-              <Link href="/">
+              <Link href="/practice#corporate">
                 <a>Read More</a>
               </Link>
             </div>
@@ -116,6 +116,12 @@ export default function Home() {
             <div className="home-about-content">
               <h1>Flo Law Firm</h1>
               <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptatum in, aliquid obcaecati recusandae mollitia, quae iste
+                sunt nesciunt eaque possimus iure incidunt labore inventore
+                vero, ratione accusamus cupiditate sapiente.
+                <br />
+                <br />
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, et
                 blanditiis perspiciatis modi fugiat eos totam recusandae minus
                 natus repudiandae illo consequatur vel cum praesentium officia
@@ -179,9 +185,14 @@ export default function Home() {
         </section>
 
         <style jsx>{`
+          @media only screen and (min-width: 1000px) {
+            .intro img {
+              height: 550px;
+              position: relative;
+            }
+          }
           @media only screen and (min-width: 1200px) {
             .intro img {
-              height: 500px;
               position: relative;
             }
           }
@@ -225,13 +236,14 @@ export default function Home() {
           }
           .home-service-item a:hover {
             transition: ease-in 0.3s;
-            border-bottom: 1px solid #00473e;
+            /* border-bottom: 1px solid #00473e; */
           }
 
           .home-service-logo {
             color: #00473e;
             padding-bottom: 20px;
             font-weight: bold;
+            text-shadow: 1px 1px 2px grey;
           }
 
           @media only screen and (min-width: 700px) {
@@ -287,6 +299,7 @@ export default function Home() {
           .home-about-wrap {
             display: grid;
             grid-template-columns: 1fr;
+            -ms-grid-columns: 1fr;
             gap: 10px;
             margin: auto;
             width: 90%;
@@ -332,6 +345,7 @@ export default function Home() {
             .home-about-wrap {
               width: 90%;
               grid-template-columns: 1fr 1fr;
+              -ms-grid-columns: 1fr 1fr;
             }
 
             .home-about-content p {
@@ -355,6 +369,12 @@ export default function Home() {
             }
           }
 
+          @media only screen and (min-width: 2000px) {
+            .home-about-wrap {
+              width: 50%;
+            }
+          }
+
           .home-contact {
             padding: 20px 0;
           }
@@ -367,7 +387,7 @@ export default function Home() {
           }
           .home-contact form {
             margin: auto;
-            width: 90%;
+            width: 85%;
           }
 
           .home-contact form div {
@@ -401,16 +421,13 @@ export default function Home() {
 
           @media only screen and (min-width: 700px) {
             .home-contact form {
-              width: 70%;
+              width: 60%;
             }
           }
 
           @media only screen and (min-width: 1000px) {
             .home-contact h3 {
               font-size: 1.15rem;
-            }
-            .home-contact form {
-              width: 70%;
             }
           }
 
@@ -419,16 +436,13 @@ export default function Home() {
               font-size: 1.2rem;
             }
             .home-contact form {
-              width: 50%;
+              width: 40%;
             }
           }
 
           @media only screen and (min-width: 2000px) {
             .home-contact h3 {
               font-size: 1.3rem;
-            }
-            .home-contact form {
-              width: 40%;
             }
           }
         `}</style>
