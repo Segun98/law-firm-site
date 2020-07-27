@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import Quickcontact from "../components/Quickcontact";
 
 export default function About() {
   return (
@@ -62,6 +63,9 @@ export default function About() {
             </p>
           </div>
         </div>
+      </section>
+      <section>
+        <Quickcontact />
       </section>
       <style jsx>{`
         .about-header {

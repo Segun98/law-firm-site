@@ -1,6 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import Quickcontact from "../components/Quickcontact";
 
 export default function Team() {
   return (
@@ -18,7 +21,18 @@ export default function Team() {
         <div className="team-wrap">
           <div className="team-member">
             <img src="/home-about.jpg" alt="team member" />
-            <h4>Barr. Segun Os</h4>
+            <h5>Barr. Segun Os </h5>
+            <aside className="team-member-contact">
+              <h6>
+                <a href="mailto:webmaster@example.com">
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} color="#475d5b" />
+                </a>
+              </h6>
+              <h6>
+                <FontAwesomeIcon icon={faPhone} color="#475d5b" /> - 0812348745
+              </h6>
+            </aside>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur corrupti minima tenetur quis veniam aliquid odio,
@@ -32,7 +46,18 @@ export default function Team() {
 
           <div className="team-member">
             <img src="/home-about.jpg" alt="team member" />
-            <h4>Barr. Eniola </h4>
+            <h5>Barr. Eniola </h5>
+            <aside className="team-member-contact">
+              <h6>
+                <a href="mailto:webmaster@example.com">
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} color="#475d5b" />
+                </a>
+              </h6>
+              <h6>
+                <FontAwesomeIcon icon={faPhone} color="#475d5b" /> - 0812348745
+              </h6>
+            </aside>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur corrupti minima tenetur quis veniam aliquid odio,
@@ -46,7 +71,18 @@ export default function Team() {
 
           <div className="team-member">
             <img src="/home-about.jpg" alt="team member" />
-            <h4>Barr. Folarin</h4>
+            <h5>Barr. Folarin </h5>
+            <aside className="team-member-contact">
+              <h6>
+                <a href="mailto:webmaster@example.com">
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} color="#475d5b" />
+                </a>
+              </h6>
+              <h6>
+                <FontAwesomeIcon icon={faPhone} color="#475d5b" /> - 0812348745
+              </h6>
+            </aside>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur corrupti minima tenetur quis veniam aliquid odio,
@@ -60,7 +96,18 @@ export default function Team() {
 
           <div className="team-member">
             <img src="/home-about.jpg" alt="team member" />
-            <h4>Barr. Oyinkan</h4>
+            <h5>Barr. Oyinkan </h5>{" "}
+            <aside className="team-member-contact">
+              <h6>
+                <a href="mailto:webmaster@example.com">
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} color="#475d5b" />
+                </a>
+              </h6>
+              <h6>
+                <FontAwesomeIcon icon={faPhone} color="#475d5b" /> - 0812348745
+              </h6>
+            </aside>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Consequatur corrupti minima tenetur quis veniam aliquid odio,
@@ -72,6 +119,9 @@ export default function Team() {
             </p>
           </div>
         </div>
+      </section>
+      <section>
+        <Quickcontact />
       </section>
       <style jsx>{`
         .team-header {
@@ -112,6 +162,91 @@ export default function Team() {
         @media only screen and (min-width: 2000px) {
           .team-header-wrap h3 {
             font-size: 2rem;
+          }
+        }
+
+        .team {
+          padding: 20px 0;
+        }
+
+        .team-wrap {
+          margin: auto;
+          width: 90%;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .team-member {
+          box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+          padding: 10px;
+          background: var(--card);
+        }
+
+        .team-member h5 {
+          text-align: center;
+          color: var(--text);
+          font-weight: 500;
+          margin-top: 5px;
+          text-shadow: 1px 1px 2px grey;
+        }
+
+        .team-member p {
+          margin-top: 10px;
+          color: var(--text);
+          font-weight: 500;
+        }
+
+        .team-wrap img {
+          height: auto;
+          width: 100%;
+        }
+
+        .team-member-contact {
+          display: flex;
+        }
+
+        .team-member-contact h6 {
+          margin: 0 10px;
+        }
+
+        @media only screen and (min-width: 700px) {
+          .team-wrap {
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media only screen and (min-width: 1000px) {
+          .team {
+            padding: 30px 0;
+          }
+
+          .team-wrap {
+            width: 80%;
+          }
+        }
+
+        @media only screen and (min-width: 1200px) {
+          .team-wrap {
+            width: 90%;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+
+          .team-member-contact h6 {
+            margin: 0 20px;
+          }
+        }
+
+        @media only screen and (min-width: 1400px) {
+          .team-wrap {
+            width: 85%;
+          }
+        }
+
+        @media only screen and (min-width: 2000px) {
+          .team-wrap {
+            width: 50%;
           }
         }
       `}</style>

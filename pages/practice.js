@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import Quickcontact from "../components/Quickcontact";
 
 export default function Practice() {
   return (
@@ -108,6 +109,10 @@ export default function Practice() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <Quickcontact />
       </section>
       <style jsx>{`
         .practice-header {

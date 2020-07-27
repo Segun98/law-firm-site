@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Carousel from "react-bootstrap/Carousel";
+import Quickcontact from "../components/Quickcontact";
 
 export default function Home() {
   return (
@@ -20,6 +21,9 @@ export default function Home() {
                   We Provide Wide Ranging Legal Services for Our Clients, from
                   Corporate and Commercial Practice to Dispute Resolution.
                 </p>
+                <Link href="/practice">
+                  <a>Learn More</a>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -30,8 +34,11 @@ export default function Home() {
               />
 
               <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Commercial and Corporate Practice</h3>
+                <p>We Provide Solutions To Specific Problems</p>
+                <Link href="/contact">
+                  <a>Request Consultation</a>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -42,11 +49,14 @@ export default function Home() {
               />
 
               <Carousel.Caption>
-                <h3>Third slide label</h3>
+                <h3>A Team of Seasoned Professionals</h3>
                 <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
+                  We Have a Dedicated Team of Professionals Ready to Meet Your
+                  Legal Needs
                 </p>
+                <Link href="/team">
+                  <a>Learn More</a>
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
@@ -182,6 +192,10 @@ export default function Home() {
               </aside>
             </form>
           </div>
+        </section>
+
+        <section>
+          <Quickcontact />
         </section>
 
         <style jsx>{`
@@ -401,7 +415,7 @@ export default function Home() {
           }
 
           .home-contact form input {
-            padding: 5px;
+            padding: 3px;
           }
 
           .home-contact form textarea {
