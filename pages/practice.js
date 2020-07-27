@@ -130,6 +130,7 @@ export default function Practice() {
           background: rgb(0, 0, 0, 0.9);
           padding: 10px;
           font-size: 0.9rem;
+          font-family: 'Scope One', serif;
         }
 
         @media only screen and (min-width: 700px) {
@@ -185,6 +186,7 @@ export default function Practice() {
           font-weight: bolder;
           padding: 10px 0;
           text-shadow: 1px 1px 1px #333;
+          font-family: "Scope One", serif;
         }
 
         .practice-content {

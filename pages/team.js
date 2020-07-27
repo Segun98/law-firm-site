@@ -139,6 +139,7 @@ export default function Team() {
           background: rgb(0, 0, 0, 0.9);
           padding: 10px;
           font-size: 0.9rem;
+          font-family: "Scope One", serif;
         }
 
         @media only screen and (min-width: 700px) {

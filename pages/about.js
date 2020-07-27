@@ -83,6 +83,7 @@ export default function About() {
           background: rgb(0, 0, 0, 0.9);
           padding: 10px;
           font-size: 0.9rem;
+          font-family: "Scope One", serif;
         }
 
         @media only screen and (min-width: 700px) {
@@ -136,6 +137,7 @@ export default function About() {
           color: #00473e;
           text-align: center;
           text-shadow: 1px 1px 3px grey;
+          font-family: "Scope One", serif;
         }
 
         @media only screen and (min-width: 700px) {

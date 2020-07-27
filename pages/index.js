@@ -225,6 +225,7 @@ export default function Home() {
             margin-bottom: 15px;
             font-size: 1.1rem;
             font-weight: bold;
+            font-family: "Scope One", serif;
           }
           .home-service-wrap {
             display: grid;
@@ -334,6 +335,7 @@ export default function Home() {
             color: #faae2b;
             font-size: 1.15rem;
             font-weight: bold;
+            font-family: "Scope One", serif;
           }
 
           .home-about-content p {
@@ -398,6 +400,7 @@ export default function Home() {
             color: #00473e;
             font-weight: bold;
             font-size: 1.1rem;
+            font-family: "Scope One", serif;
           }
           .home-contact form {
             margin: auto;
